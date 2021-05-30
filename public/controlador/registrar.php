@@ -10,13 +10,16 @@
 
 include '../../config/conectarBD.php'; 
 
+$codigoaut=$_POST["autorAJAX"];
+echo($codigoaut);
 $nombrelib = isset($_POST["nombrelib"]) ? mb_strtoupper(trim($_POST["nombrelib"]), 'UTF-8') : null;
 $ISBN = isset($_POST["ISBN"]) ? trim($_POST["ISBN"]) : null;
 $numpagina = isset($_POST["numpagina"]) ? trim($_POST["numpagina"]) : null;
 $numcapitulo = isset($_POST["numcapitulo"]) ? trim($_POST["numcapitulo"]) : null;
 $titulocap = isset($_POST["titulocap"]) ? mb_strtoupper(trim($_POST["titulocap"]), 'UTF-8') : null;
 
- $sql = "INSERT INTO libro VALUES (0, '$nombrelib', '$ISBN', '$numpagina')"; 
+
+ $sql = "INSERT INTO libro VALUES (0,'$nombrelib', '$ISBN', '$numpagina','$codigoaut')"; 
 
  if ($conn->query($sql) === TRUE) {
  echo "<p>Se ha registrado el libro correctamemte!!!</p>"; 

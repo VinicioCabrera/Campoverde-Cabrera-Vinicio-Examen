@@ -1,56 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../Estilos/Ventanas.css">
+    <link rel="stylesheet" href="../Estilos/Ventanas.css"> 
     <link rel="icon" type="image/png" href="../Estilos/Imagenes/Icono.png" sizes="16x16">
-    <script type="text/javascript">
-        function tiempoReal(){
-            var aut=$.ajax({
-                url:'../controlador/registrar.php',
-                dataType:'text',
-                async:false
-
-            }).responseText;
-            document.getElementById("autor").innerHTML=aut;
-        }
-        setInterval(tiempoReal,1000); 
-
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>REGISTRAR LIBROS</title>
 </head>
-<body>
+<header >
+  <h1>REGISTRAR LIBROS</h1>
+</header>
 
-<form id="Registrar" method="POST" action="../controlador/registrar.php" >
- 
- <label for="nombrelib">NOMBRE DEL LIBRO : </label>
+<body onload="tiempoReal()">
+
+<form id="frmajax" method="POST" action="../controlador/registrar.php" >
+
+ <label for="nombrelib">NOMBRE DEL LIBRO </label><br>
  <input type="text" id="nombrelib" name="nombrelib" value="" placeholder="Ingresar nombre del libro"  />
  <br>
- 
- <label for="ISBN"> ISBN: </label>
+ <label for="ISBN">ISBN </label><br>
  <input type="text" id="ISBN" name="ISBN" value="" placeholder="Ingresar ISBN ..."/>
  <br>
- <label for="numpagina">NUMERO DE PAGINAS:</label>
+ <label for="numpagina">NUMERO DE PAGINAS</label><br>
  <input type="text" id="numpagina" name="numpagina" value="" placeholder="Ingresar numero de pagina..."/>
  <br>
- <label for="numcapitulo">NUMERO DE CAPITULOS:</label>
+ <label for="numcapitulo">NUMERO DE CAPITULOS</label><br>
  <input type="text" id="numcapitulo" name="numcapitulo" value="" placeholder="Ingresar numero de pagina..."/>
  <br>
- <label for="titulocap">TITULO DEL CAPITULO:</label>
+ <label for="titulocap">TITULO DEL CAPITULO</label><br>
  <input type="text" id="titulocap" name="titulocap" value="" placeholder="Ingresar numero de pagina..."/>
  <br>
- <label for="autor">AUTOR: </label>
- <select  name="autor" id="autor">
-     <option> </option>
-     <option></option>
-     
-</select>
 
-<div id="boton">
+      <label for="autor">AUTOR</label><br>
+      <select id="autorajax" ></select>    
+     
+ <div id="boton">
  <input type="submit" id="crear" name="crear" value="REGISTRAR" />
- <input type="reset" id="cancelar" name="cancelar" value="CANCELAR" onclick="limpiar()" />
+ <input type="reset" id="cancelar" name="cancelar" value="CANCELAR"  />
 </div>
-</form>
+
+</form> 
+
+<script>
+	function tiempoReal(){
+
+      $.ajax({
+        url: 'ajax-autores.php',
+        type: 'POST',
+        success:function(response){
+         $('#autorajax').html(response);
+         console.log(response);
+        }
+      });
+    }
+</script> 
+
 </body>
 </html>
