@@ -8,6 +8,8 @@ $codigoaut= $_POST["codaut"];
   $sql = "INSERT INTO capitulo VALUES (0, '$numerocap', '$titulocap',$codigoaut,$codigolib)"; 
   if ($conn->query($sql) === TRUE) {
      echo "<p>Se ha creado los capitulos correctamemte!!!</p>"; 
+    //  echo('<a href="../../public/vista/listar.php">Regresar</a>')
+    header("location: ../../public/vista/listar.php");
    }else{
   echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
   } 
