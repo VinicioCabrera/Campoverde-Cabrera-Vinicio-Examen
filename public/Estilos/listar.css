@@ -9,16 +9,6 @@ body{
     overflow-x: hidden;
 	background-size:41cm 20cm; 
 }
-form{
-    padding: 50px 20px;
-    background-color: #474646a6;
-    margin: calc(25% + 100px);
-    margin-top: 0px;
-    padding-top: 58px;
-    border-radius: 5px;
-    box-shadow: 5px 5px 15px rgb(158, 151, 151);
-}
-
 input {
 	width: calc(100% - 200px);
 	padding: 10px;
@@ -61,8 +51,4 @@ select {
     font-size: 15px;
     font-family: Tahoma;
     color: rgb(5, 5, 5);  
-}
-
-#table1{
-    margin-top: 100px;
 }

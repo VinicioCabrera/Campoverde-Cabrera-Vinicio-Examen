@@ -2,9 +2,9 @@
  //incluir conexión a la base de datos
  include "../../config/conectarBD.php";
  $nombre = $_GET['nombre']; 
-echo('llego');
- 
- $sql = "SELECT * FROM libro,capitulos,autor WHERE autor.aut_nombre='$nombre'  ";
+
+ $sql = "SELECT * FROM autor,libro,capitulo WHERE autor.aut_nombre='Gabriel García Márquez' 
+ and autor.aut_codigo=libro.aut_codigo and libro.lib_codigo=capitulo.lib_codigo";
 
  $result = $conn->query($sql);
  
