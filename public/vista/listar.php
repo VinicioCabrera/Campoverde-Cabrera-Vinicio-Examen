@@ -11,6 +11,9 @@
     <h1>LISTAR LIBROS</h1>
 </header>
 <body>
+<div id="aux">
+<input type="button" id="btaux" name="btaux" value="INICIO" onclick="location.href='Index.html'"/>
+</div> 
 <form  onsubmit="return buscarPorNombre()">
 
     <div id="boton1">  
@@ -59,6 +62,6 @@
  
  $conn->close(); 
  ?>
-</table>  
+</table> 
 </body>
 </html>

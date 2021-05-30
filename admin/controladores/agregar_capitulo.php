@@ -9,7 +9,7 @@ $codigoaut= $_POST["codaut"];
   if ($conn->query($sql) === TRUE) {
      echo "<p>Se ha creado los capitulos correctamemte!!!</p>"; 
     //  echo('<a href="../../public/vista/listar.php">Regresar</a>')
-    header("location: ../../public/vista/listar.php");
+    header("location: ../../public/vista/agregar_capitulo.php");
    }else{
   echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
   } 

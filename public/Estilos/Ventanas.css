@@ -7,6 +7,7 @@
 body{
     background-image: url("Imagenes/fondo.jpg");
     overflow-x: hidden;
+    overflow-y: hidden;
 	background-size:41cm 20cm; 
 }
 form{
@@ -65,4 +66,22 @@ select {
 
 #table1{
     margin-top: 100px;
+}
+#aux #btaux{
+    width:100px;
+}
+
+#aux{
+ position: relative;
+ bottom: 750px;
+ right: 700px;
+}
+#aux1 #btaux1{
+    width:100px;
+}
+
+#aux1{
+ position: relative;
+ bottom: 1200px;
+ right: 700px;
 }

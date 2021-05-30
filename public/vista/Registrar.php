@@ -55,6 +55,8 @@
       });
     }
 </script> 
-
+<div id="aux1">
+<input type="button" id="btaux1" name="btaux1" value="INICIO" onclick="location.href='Index.html'"/>
+</div> 
 </body>
 </html>

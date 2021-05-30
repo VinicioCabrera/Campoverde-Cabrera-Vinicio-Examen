@@ -30,5 +30,9 @@
 </div>
 
 </form> 
+<div id="aux">
+<input type="button" id="btaux" name="btaux" value="LISTAR" onclick="location.href='listar.php'"/>
+</div>
 </body>
+
 </html>
