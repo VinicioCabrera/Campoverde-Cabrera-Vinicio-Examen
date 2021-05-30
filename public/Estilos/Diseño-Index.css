@@ -17,19 +17,13 @@ header{
 .wrap{
 	width: 1100px;
 	margin: 50px auto;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 }
 
 .tarjeta-wrap{
 	margin: 10px;
-	-webkit-perspective: 800;
+	 -webkit-perspective: 800; /*permite ver las perspetiva del giro */
 	perspective: 800;
 }
 
@@ -38,10 +32,9 @@ header{
 	height: 350px;
 	background: #F29720;
 	position: relative;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transition: .7s ease;
-	transition: .7s ease;
+	-webkit-transform-style: preserve-3d; /* permite mostrar el texto de atras*/
+	transform-style: preserve-3d; /* permite mostrar el texto de atras (relacionada con la de arriba)*/
+	transition: .7s ease;/* permite hacer la trancicion de giro por tiempo*/
 	
 
 }
@@ -52,8 +45,8 @@ header{
 	position: absolute;
 	top: 0;
 	left: 0;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+	backface-visibility: hidden;  /*  esconde el ancho de atras*/
+
 }
 
 .adelante{
@@ -61,20 +54,11 @@ header{
 }
 
 .atras{
-	-webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg); /*muestra la imagen primero*/
+	transform: rotateY(180deg); /*muestra la imagen primero (relacionada con la de arriba)*/
 	padding: 10px;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
+	display: flex; 
 	justify-content: center;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
 	align-items: center;
 	text-align: center;
 	color: rgb(7, 7, 7);
@@ -92,8 +76,7 @@ header{
 }
 
 .tarjeta-wrap:hover .tarjeta{
-	-webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+	transform: rotateY(180deg); /* permite hacer la trancicion de giro */
 }
 
 .card1{
@@ -106,3 +89,4 @@ header{
 	background-size: cover;
 	box-shadow: 10px 10px 15px rgb(233, 229, 229, 0.65);
 }
+

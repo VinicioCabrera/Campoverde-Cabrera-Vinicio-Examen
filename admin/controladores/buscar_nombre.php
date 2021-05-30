@@ -21,13 +21,13 @@
  while($row = $result->fetch_assoc()) {
 
     echo "<tr>";
-    echo " <td><font color=#FFFF>" . $row["lib_nombre"] . "</td>";
-    echo " <td><font color=#FFFF>" . $row['lib_ISBN'] ."</td>";
-    echo " <td><font color=#FFFF>" . $row['lib_num_paginas'] . "</td>";
-    echo " <td><font color=#FFFF>" . $row['cap_num_capitulo'] . "</td>";
-    echo " <td><font color=#FFFF>" . $row['cap_titulo'] . "</td>";
-    echo " <td><font color=#FFFF>" . $row['aut_nombre'] . "</td>"; 
-    echo " <td><font color=#FFFF>" . $row['aut_nacionalidad'] . "</td>"; 
+    echo " <td><font color=#60E741>" . $row["lib_nombre"] . "</td>";
+    echo " <td><font color=#60E741>" . $row['lib_ISBN'] ."</td>";
+    echo " <td><font color=#60E741>" . $row['lib_num_paginas'] . "</td>";
+    echo " <td><font color=#60E741>" . $row['cap_num_capitulo'] . "</td>";
+    echo " <td><font color=#60E741>" . $row['cap_titulo'] . "</td>";
+    echo " <td><font color=#60E741>" . $row['aut_nombre'] . "</td>"; 
+    echo " <td><font color=#60E741>" . $row['aut_nacionalidad'] . "</td>"; 
     echo "</tr>";
  
 } 

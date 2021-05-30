@@ -35,7 +35,7 @@
         </tr>
  <?php
  include '../../config/conectarBD.php'; 
- $consulta="SELECT * FROM libro,capitulo,autor ";
+ $consulta="SELECT * FROM libro as l INNER JOIN capitulo as c on l.lib_codigo=c.lib_codigo INNER JOIN autor as a on a.aut_codigo=c.aut_codigo";
  
  $result = $conn->query($consulta);
  if ($result->num_rows > 0) {
