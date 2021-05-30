@@ -23,7 +23,7 @@
 </from>
 <div id="informacion"> </div>
 <br>
-<!-- <table id="tabla1"style="width:100% " >
+ <table id="tabla1"style="width:100% " >
         <tr>
         <th><font color=#600D0D>Nombre del Libro</th>
         <th><font color=#600D0D>ISBN</th>
@@ -35,8 +35,7 @@
         </tr>
  <?php
  include '../../config/conectarBD.php'; 
- $consulta="SELECT * FROM libro,capitulo,autor 
- where libro.lib_codigo=capitulo.lib_codigo  ";
+ $consulta="SELECT * FROM libro,capitulo,autor ";
  
  $result = $conn->query($consulta);
  if ($result->num_rows > 0) {
@@ -59,6 +58,6 @@
 
  $conn->close(); 
  ?>
-</table>    -->
+</table>  
 </body>
 </html>

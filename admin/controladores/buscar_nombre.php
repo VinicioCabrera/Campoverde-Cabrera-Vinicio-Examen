@@ -3,11 +3,9 @@
  include "../../config/conectarBD.php";
  $nombre = $_GET['nombre']; 
 
- $sql = "SELECT * FROM autor,libro,capitulo WHERE autor.aut_nombre='Gabriel García Márquez' 
- and autor.aut_codigo=libro.aut_codigo and libro.lib_codigo=capitulo.lib_codigo";
-
+ $sql = "SELECT * FROM autor,libro,capitulo WHERE autor.aut_nombre='$nombre'
+ and autor.aut_codigo=capitulo.aut_codigo and libro.lib_codigo=capitulo.lib_codigo";;
  $result = $conn->query($sql);
- 
  echo " <table style='width:100%'>
  <tr>
  <th><font color=#FFFF>NOMBRE LIBRO</th>
@@ -35,7 +33,7 @@
 } 
  } else { 
  echo "<tr>";
- echo " <td colspan='7'><font color=#FFFFFF> No existen libros registrados en el sistema </td>";
+ echo " <td colspan='7'><font color=#FFFFFF> No existen libros de $nombre registrados en el sistema </td>";
  echo "</tr>"; 
  }
  echo "</table>";
