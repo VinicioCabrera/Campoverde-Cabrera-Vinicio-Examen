@@ -1,5 +1,5 @@
 <?php
- //incluir conexión a la base de datos
+ 
  include "../../config/conectarBD.php";
  $nombre = $_GET['nombre']; 
 
@@ -29,8 +29,11 @@
     echo " <td><font color=#60E741>" . $row['aut_nombre'] . "</td>"; 
     echo " <td><font color=#60E741>" . $row['aut_nacionalidad'] . "</td>"; 
     echo "</tr>";
- 
+    $codlib=($row['lib_codigo']); 
+    $codaut=($row['aut_codigo']); 
+    
 } 
+ echo('<a href="../../public/vista/agregar_capitulo.php?codigo='.$codlib.'&cod='.$codaut.'"> AGREGAR CAPITULO </a>');
  } else { 
  echo "<tr>";
  echo " <td colspan='7'><font color=#FFFFFF> No existen libros de $nombre registrados en el sistema </td>";

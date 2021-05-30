@@ -52,3 +52,6 @@ select {
     font-family: Tahoma;
     color: rgb(5, 5, 5);  
 }
+#agregarcap{
+    width: 200px;
+}

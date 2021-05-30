@@ -50,12 +50,13 @@
  echo " <td><font color=#FFFF>" . $row['aut_nacionalidad'] . "</td>"; 
  echo "</tr>";
  }
+ 
  } else {
  echo "<tr>";
  echo " <td colspan='7'>No existen el libro registrado en el sistema</td>";
  echo "</tr>";
  }
-
+ 
  $conn->close(); 
  ?>
 </table>  

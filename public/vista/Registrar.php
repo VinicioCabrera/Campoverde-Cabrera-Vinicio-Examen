@@ -33,7 +33,7 @@
  <br>
 
       <label for="autor">AUTOR</label><br>
-      <select id="autorajax" ></select>    
+      <select id="autorajax" name="autorAJAX"></select>    
      
  <div id="boton">
  <input type="submit" id="crear" name="crear" value="REGISTRAR" />

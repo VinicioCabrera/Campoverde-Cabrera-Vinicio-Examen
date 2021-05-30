@@ -66,13 +66,10 @@ header{
     background: #ddad6f;
 	box-shadow: 10px 10px 15px rgb(233, 229, 229, 0.65);
 }
-.atras>p{
-	margin-bottom:100px;
-	margin-left: 320px;
-}
+
 .atras>a{
-	margin-top: 230px;
-	padding-right: 300px;
+	margin-top: 10px;
+	padding-right: 10px;
 }
 
 .tarjeta-wrap:hover .tarjeta{
